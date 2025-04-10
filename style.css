@@ -218,17 +218,6 @@ section {
     padding: 2rem;
   }
 
-  /* Optional: Add a hamburger menu for better navigation */
-  .navbar-toggle {
-    display: block;
-    background-color: #884ea0;
-    color: white;
-    padding: 0.5rem;
-    border-radius: 50%;
-    cursor: pointer;
-    margin-left: auto;
-  }
-
   .navbar-toggle.active + .navbar ul {
     display: flex;
   }

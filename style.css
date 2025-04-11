@@ -173,7 +173,6 @@ section {
   color: #1a1a1a;
 }
 
-/* For smaller screens (max-width: 768px), adjust the navbar */
 @media (max-width: 768px) {
   body {
     padding-left: 0;
@@ -209,7 +208,7 @@ section {
   }
 
   header .navbar ul li a {
-    width: 100%; /* Make links span the full width */
+    width: 100%; 
     padding: 1rem 0;
     text-align: center;
   }
@@ -230,9 +229,8 @@ section {
   }
 }
 
-/* For very small screens, like phones in portrait mode */
 @media (max-width: 480px) {
   header .navbar ul li a {
-    font-size: 0.9rem; /* Adjust font size for small screens */
+    font-size: 0.9rem; 
   }
 }

@@ -10,6 +10,11 @@
   transition: all 0.2s linear;
 }
 
+*::selection{
+  background-color: #884ea0;
+  color: white;
+}
+
 html {
   scroll-behavior: smooth;
 }

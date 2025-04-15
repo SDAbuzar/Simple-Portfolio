@@ -9,8 +9,7 @@
 </head>
 <body>
 
-  <input type="checkbox" id="menu-toggle">
-  <label for="menu-toggle" class="navbar-toggle"><i class="fas fa-bars"></i></label>
+  <input type="checkbox" id="nav-toggle" class="nav-toggle">
 
   <header>
     <div class="user">
@@ -18,12 +17,18 @@
       <h3 class="name">Sayyad Abuzarali</h3>
       <p class="post">Web Designer</p>
     </div>
+
+  
+    <label for="nav-toggle" class="navbar-toggle">
+      <i class="fas fa-bars"></i>
+    </label>
+
     <nav class="navbar">
       <ul>
-        <li><a href="#home">Home</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#education">Resume</a></li>
-        <li><a href="#contact">Contact</a></li>
+        <li><label for="nav-toggle"><a href="#home">Home</a></label></li>
+        <li><label for="nav-toggle"><a href="#about">About</a></label></li>
+        <li><label for="nav-toggle"><a href="#education">Resume</a></label></li>
+        <li><label for="nav-toggle"><a href="#contact">Contact</a></label></li>
       </ul>
     </nav>
   </header>
@@ -49,8 +54,8 @@
   <section class="contact" id="contact">
     <h1 class="heading"><span>Contact</span> me</h1>
     <ul class="contact-list">
-      <li><i class="fas fa-envelope"></i> Email: <a href="mailto:sayyadabuzarali03@gmail.com">sayyadabuzarali03@gmail.com</a></li>
-      <li><i class="fas fa-phone"></i> Phone: <a href="tel:+919975787053">+91 9975787053</a></li>
+      <li><i class="fas fa-envelope"></i> <a href="mailto:sayyadabuzarali03@gmail.com">sayyadabuzarali03@gmail.com</a></li>
+      <li><i class="fas fa-phone"></i> <a href="tel:+919975787053">+91 9975787053</a></li>
     </ul>
   </section>
 

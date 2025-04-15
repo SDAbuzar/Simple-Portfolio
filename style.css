@@ -25,24 +25,19 @@ body {
   padding-left: 18rem;
 }
 
-#menu-toggle {
+.nav-toggle {
   display: none;
 }
 
 .navbar-toggle {
   display: none;
-  position: fixed;
-  top: 1rem;
-  left: 1rem;
   font-size: 0.9rem;
-  background: #884ea0;
-  color: white;
-  padding: 0.5rem;
-  border-radius: 0.5rem;
   cursor: pointer;
-  z-index: 2000;
+  color: #884ea0;
+  margin-bottom: 1rem;
 }
 
+/* HEADER */
 header {
   position: fixed;
   top: 0;
@@ -57,7 +52,6 @@ header {
   padding: 2rem 1rem;
   text-align: center;
   z-index: 1000;
-  transition: transform 0.3s ease;
 }
 
 header .user img {
@@ -94,9 +88,9 @@ header .navbar ul li a {
 header .navbar ul li a:hover {
   background: #884ea0;
   color: #fff;
-  transform: scale(1.05);
 }
 
+/* SECTIONS */
 section {
   min-height: 100vh;
   padding: 4rem 6rem;
@@ -166,12 +160,11 @@ section {
   font-size: 1rem;
   cursor: pointer;
   display: inline-block;
-  transition: background 0.3s, transform 0.2s;
+  transition: background 0.3s;
 }
 
 .btn:hover {
   background: #7d3c98;
-  transform: scale(1.05);
 }
 
 .contact .contact-list {
@@ -184,11 +177,15 @@ section {
 
 .contact .contact-list li {
   margin-bottom: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem;
+  word-break: break-word;
 }
 
 .contact .contact-list a {
   color: #884ea0;
-  margin-left: 0.5rem;
 }
 
 .footer {
@@ -203,18 +200,38 @@ section {
     padding-left: 0;
   }
 
+  header {
+    width: 100%;
+    height: auto;
+    position: relative;
+    padding: 1.5rem 2rem;
+  }
+
   .navbar-toggle {
     display: block;
   }
 
-  header {
-    transform: translateX(-100%);
-    width: 16rem;
-    height: 100%;
+  .nav-toggle:checked + header .navbar {
+    display: block;
   }
 
-  #menu-toggle:checked ~ header {
-    transform: translateX(0);
+  .navbar {
+    display: none;
+    width: 100%;
+    margin-top: 1rem;
+  }
+
+  .navbar ul {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+  }
+
+  .navbar ul li a {
+    width: 100%;
+    padding: 1rem;
+    text-align: center;
   }
 
   section {
@@ -223,15 +240,24 @@ section {
 }
 
 @media (max-width: 480px) {
-  header .navbar ul li a {
+  .contact .contact-list li {
     font-size: 1rem;
+  }
+
+  .contact .contact-list i {
+    font-size: 1rem;
+  }
+
+  header .user img {
+    height: 4rem;
+    width: 4rem;
   }
 
   .home h1 {
     font-size: 2rem;
   }
 
-  .home h3 {
-    font-size: 1.5rem;
+  .home p, .about p {
+    font-size: 1rem;
   }
 }
